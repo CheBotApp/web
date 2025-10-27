@@ -1,0 +1,13 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8fafc;
+}
+
+a {
+  text-decoration: underline;
+}
+
+header img {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(34,150,210,0.08);
+}
