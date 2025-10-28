@@ -1,13 +1,56 @@
+:root {
+  --primary-purple: #8B2F97;
+  --dark-purple: #6B1E6F;
+  --light-purple: #B565BF;
+  --accent-black: #000000;
+  --bg-light: #F5F5F5;
+  --white: #FFFFFF;
+}
+
 body {
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  background: #f8fafc;
+  background: var(--bg-light);
 }
 
 a {
   text-decoration: underline;
+  color: var(--primary-purple);
+}
+
+a:hover {
+  color: var(--dark-purple);
 }
 
 header img {
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(34,150,210,0.08);
+  box-shadow: 0 2px 8px rgba(139, 47, 151, 0.15);
+}
+
+.text-primary-purple {
+  color: var(--primary-purple) !important;
+}
+
+.bg-primary-purple {
+  background-color: var(--primary-purple) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-purple);
+  border-color: var(--dark-purple);
+}
+
+.btn-outline-primary {
+  color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+  color: var(--white);
 }
