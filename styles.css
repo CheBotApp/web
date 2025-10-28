@@ -12,9 +12,107 @@ body {
   background: var(--bg-light);
 }
 
+/* Hero Styles */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.text-black {
+  color: var(--accent-black);
+}
+
+.text-purple {
+  color: var(--primary-purple);
+}
+
+/* CTA Box Styles */
+.cta-box {
+  background: linear-gradient(135deg, #F3E5F5 0%, #fff 100%);
+  border: 3px solid var(--primary-purple);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-black);
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: var(--accent-black);
+}
+
+.link-purple {
+  color: var(--primary-purple) !important;
+  text-decoration: underline;
+}
+
+.link-purple:hover {
+  color: var(--dark-purple) !important;
+}
+
+.link-black {
+  color: var(--accent-black) !important;
+  text-decoration: underline;
+}
+
+.link-black:hover {
+  color: #333 !important;
+}
+
+/* Section Styles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-black);
+  line-height: 1.2;
+}
+
+.section-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  font-size: 1.125rem;
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: #333;
+}
+
+.feature-list li::before {
+  content: "●";
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+/* Links */
 a {
   text-decoration: underline;
   color: var(--primary-purple);
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -37,6 +135,9 @@ header img {
 .btn-primary {
   background-color: var(--primary-purple);
   border-color: var(--primary-purple);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
 }
 
 .btn-primary:hover {
@@ -47,10 +148,40 @@ header img {
 .btn-outline-primary {
   color: var(--primary-purple);
   border-color: var(--primary-purple);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
 }
 
 .btn-outline-primary:hover {
   background-color: var(--primary-purple);
   border-color: var(--primary-purple);
   color: var(--white);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-text {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-text {
+    font-size: 1rem;
+  }
 }
