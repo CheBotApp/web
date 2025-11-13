@@ -67,7 +67,7 @@ h2 {background: linear-gradient(90deg, var(--accent), #6b47ff); -webkit-backgrou
 .feature h3{margin:0 0 0.4rem}
 
 .examples{padding:3.5rem 0}
-.examples-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.examples-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;align-items:start}
 .example{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
 .bubble{background:rgba(255,255,255,0.02);padding:10px;border-radius:12px;color:var(--muted);margin-bottom:8px}
 .bubble.bot{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b0210}
