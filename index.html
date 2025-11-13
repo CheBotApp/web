@@ -102,6 +102,73 @@
 			box-shadow:0 20px 60px rgba(138,91,255,0.10);
 		}
 
+		/* Secciones con fondo suave para mejor legibilidad */
+		.features {
+			background: rgba(0,0,0,0.4);
+			backdrop-filter: blur(10px);
+			border-radius: 16px;
+			padding: 20px;
+			margin: 20px 0;
+		}
+		.examples {
+			background: rgba(0,0,0,0.4);
+			backdrop-filter: blur(10px);
+			border-radius: 16px;
+			padding: 20px;
+			margin: 20px 0;
+		}
+
+		/* Testimonios */
+		.testimonials {
+			background: rgba(0,0,0,0.4);
+			backdrop-filter: blur(10px);
+			border-radius: 16px;
+			padding: 20px;
+			margin: 20px 0;
+		}
+		.testimonials h2 {
+			color: var(--text);
+			margin-bottom: 1rem;
+		}
+		.testimonials-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1rem;
+		}
+		.testimonial {
+			background: linear-gradient(180deg, rgba(138,91,255,0.03), rgba(124,92,255,0.015));
+			border-radius: 12px;
+			padding: 1.2rem;
+			border: 1px solid rgba(138,91,255,0.06);
+			box-shadow: 0 10px 30px rgba(124,92,255,0.04);
+			transition: transform 300ms, box-shadow 300ms;
+		}
+		.testimonial:hover {
+			transform: translateY(-6px);
+			box-shadow: 0 20px 60px rgba(138,91,255,0.10);
+		}
+		.testimonial p {
+			margin: 0 0 1rem;
+			color: var(--text);
+			font-style: italic;
+		}
+		.testimonial-author {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.testimonial-author span {
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+		.contact-cta {
+			background: rgba(0,0,0,0.4);
+			backdrop-filter: blur(10px);
+			border-radius: 16px;
+			padding: 20px;
+			margin: 20px 0;
+		}
+
 		/* Ejemplos: recuadros lilas más vibrantes, glow y hover */
 		.examples-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;align-items:start;margin-top:12px}
 		.example{
@@ -204,6 +271,7 @@
 			<nav class="nav">
 				<a href="#features">Características</a>
 				<a href="#examples">Ejemplos</a>
+				<a href="#testimonials">Testimonios</a>
 				<a href="#contact" class="cta">Habla por WhatsApp</a>
 			</nav>
 		</div>
@@ -333,6 +401,32 @@
 			</div>
 		</section>
 
+		<section id="testimonials" class="testimonials">
+			<div class="container">
+				<h2>Testimonios de usuarios</h2>
+				<div class="testimonials-grid">
+					<div class="testimonial">
+						<p>"CheBot me cambió la vida. Antes perdía notas y recordatorios por todos lados. Ahora, todo está en WhatsApp, y nunca olvido nada. ¡Es un éxito total!"</p>
+						<div class="testimonial-author">
+							<span>María G., Empresaria</span>
+						</div>
+					</div>
+					<div class="testimonial">
+						<p>"Las listas colaborativas son geniales para mi equipo. Simplifican la organización de tareas diarias sin apps extra. CheBot hace que todo sea fácil y rápido."</p>
+						<div class="testimonial-author">
+							<span>Carlos R., Desarrollador</span>
+						</div>
+					</div>
+					<div class="testimonial">
+						<p>"Guardo fotos y audios importantes directamente en WhatsApp con CheBot. Los recordatorios recurrentes me ayudan a mantener rutinas. ¡No puedo vivir sin él!"</p>
+						<div class="testimonial-author">
+							<span>Ana L., Estudiante</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section id="contact" class="contact-cta">
 			<div class="container">
 				<h2>Comenzá con CheBot</h2>
@@ -348,6 +442,7 @@
 			<nav class="footer-nav">
 				<a href="#features">Características</a>
 				<a href="#examples">Ejemplos</a>
+				<a href="#testimonials">Testimonios</a>
 				<a href="#contact">Contacto</a>
 			</nav>
 
