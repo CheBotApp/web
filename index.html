@@ -101,7 +101,7 @@
 			transition:transform 300ms, box-shadow 300ms;
 		}
 		.features .feature:hover{
-			transform:translateY(-6px);
+			transform:translateY(-6px) scale(1.02);
 			box-shadow:0 20px 60px rgba(138,91,255,0.10);
 		}
 
@@ -459,5 +459,22 @@
 			<p class="muted"><a href="privacy.html" target="_blank" rel="noopener">Política de privacidad</a></p>
 		</div>
 	</footer>
+
+	<!-- Botón volver arriba -->
+	<button id="back-to-top" class="back-to-top" title="Volver arriba">↑</button>
+
+	<script>
+		const backToTopButton = document.getElementById('back-to-top');
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+				backToTopButton.classList.add('show');
+			} else {
+				backToTopButton.classList.remove('show');
+			}
+		});
+		backToTopButton.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	</script>
 </body>
 </html>
