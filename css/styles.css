@@ -87,5 +87,5 @@ h2 {background: linear-gradient(90deg, var(--accent), #6b47ff); -webkit-backgrou
 	.hero-inner{flex-direction:column}
 	.hero-visual{max-width:100%;width:100%}
 	.grid{grid-template-columns:repeat(1,1fr)}
-	.examples-grid{grid-template-columns:repeat(1,1fr)}
+	.examples-grid{grid-template-columns:repeat(1,1fr);align-items:start}
 }
