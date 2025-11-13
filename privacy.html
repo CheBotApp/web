@@ -1,119 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidad - CheBot App</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>CheBot — Política de privacidad</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="description" content="Política de privacidad de CheBot">
+	<!-- Estilos oscuros/violetas coherentes con index.html -->
+	<style>
+		:root{
+			--max-width:1100px;
+			--accent:#8a5bff;
+			--bg:#000000;
+			--muted:#9aa4b2;
+			--text:#e6eef6;
+
+			/* violeta ampliado para la página de privacidad */
+			--violet-strong: rgba(138,91,255,0.52);
+			--violet-mid:    rgba(152,112,255,0.34);
+			--violet-soft:   rgba(199,170,255,0.16);
+			--violet-border: rgba(138,91,255,0.42);
+			--violet-glow:   rgba(138,91,255,0.14);
+		}
+		*{box-sizing:border-box}
+		html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg)}
+		a{color:inherit}
+		.container{max-width:var(--max-width);margin:0 auto;padding:0 16px}
+
+		/* Header (coherente con index) */
+		.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+		.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--text);text-decoration:none}
+		.logo-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:0 0 auto;box-shadow:0 8px 30px rgba(138,91,255,0.06)}
+		.nav{display:flex;gap:18px;align-items:center}
+		.nav a{color:var(--text);text-decoration:none;padding:8px 6px;font-weight:500;opacity:0.92}
+		.nav a.cta{background:linear-gradient(90deg,var(--accent),#6b47ff);color:#fff;padding:8px 12px;border-radius:8px;box-shadow:0 8px 30px var(--violet-glow)}
+
+		main{padding:28px 0}
+		h1{font-size:clamp(1.4rem,3vw,2rem);margin:0 0 8px;color:var(--accent);text-shadow:0 6px 30px rgba(138,91,255,0.10)}
+		h2{margin:20px 0 8px;font-size:1.05rem;color:var(--text)}
+		p,li{color:var(--muted);line-height:1.6}
+
+		/* Card estilo violeta (coincidente con index) */
+		.card{
+			background: linear-gradient(135deg, var(--violet-mid) 0%, rgba(138,91,255,0.08) 50%, rgba(124,92,255,0.03) 100%);
+			border:1px solid var(--violet-border);
+			padding:22px;
+			border-radius:14px;
+			box-shadow: 0 18px 60px rgba(124,92,255,0.12), inset 0 -6px 20px rgba(0,0,0,0.2);
+			margin-bottom:18px;
+			-webkit-backdrop-filter: blur(6px);
+			backdrop-filter: blur(6px);
+			transition:transform 240ms ease, box-shadow 240ms ease;
+		}
+		.card:hover{
+			transform:translateY(-6px);
+			box-shadow: 0 28px 90px rgba(138,91,255,0.18);
+		}
+		.card h2{color:var(--text)}
+		.card ul{margin:8px 0 0;padding-left:18px}
+		.card li{margin-bottom:8px;color:var(--muted)}
+
+		/* Recuadros de color (decorativos) */
+		.color-box{
+			display:inline-block;
+			padding:8px 12px;
+			border-radius:999px;
+			font-weight:700;
+			font-size:0.9rem;
+			color:#fff;
+			background: linear-gradient(90deg, var(--violet-strong), var(--violet-mid));
+			box-shadow: 0 8px 30px rgba(138,91,255,0.12);
+			margin-bottom:12px;
+		}
+		/* Caja destacada para notas/llamadas a la acción */
+		.note-box{
+			padding:12px 16px;
+			border-radius:12px;
+			background: linear-gradient(90deg, rgba(138,91,255,0.12), rgba(152,112,255,0.06));
+			border:1px solid rgba(138,91,255,0.14);
+			color:var(--text);
+			box-shadow:0 12px 40px rgba(138,91,255,0.08);
+			margin:12px 0;
+		}
+		/* Palabras clave: clase util .kw y strong dentro de cards */
+		.kw, .card strong{
+			color:var(--accent);
+			background: linear-gradient(180deg, rgba(138,91,255,0.14), rgba(138,91,255,0.08));
+			border:1px solid rgba(138,91,255,0.18);
+			padding:4px 8px;
+			border-radius:8px;
+			box-shadow:0 8px 24px rgba(138,91,255,0.06);
+			font-weight:700;
+		}
+
+		/* Footer */
+		.footer{border-top:1px solid rgba(255,255,255,0.03);padding:20px 0;margin-top:32px}
+		.footer .container{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+		.footer a{color:var(--muted);text-decoration:none}
+		.footer a:hover{color:var(--text)}
+
+		@media (max-width:820px){.container{padding:0 14px}}
+	</style>
 </head>
-<body class="bg-light">
-  <header class="bg-white border-bottom shadow-sm mb-5">
-    <div class="container py-5 text-center">
-      <h1 class="hero-title mt-4 mb-2">
-        <span class="text-black">CheBot</span> <span class="text-purple">App</span>
-      </h1>
-      <p class="hero-subtitle mb-0">Política de Privacidad</p>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-8">
-          <p class="text-muted small mb-4">Última actualización: 28 de octubre de 2025</p>
-          
-          <section class="mb-5">
-            <h2 class="section-title mb-4"><span class="text-purple">Resumen</span></h2>
-            <p>
-              CheBot App respeta tu privacidad. Este servicio actúa como un puente entre usuarios y datos públicos de Argentina. No vendemos, compartimos ni utilizamos tus datos personales con fines comerciales.
-            </p>
-          </section>
+<body>
+	<header class="site-header">
+		<div class="container">
+			<a class="logo" href="index.html">
+				<img class="logo-avatar" src="img/avatar.png" alt="CheBot">
+				<span>CheBot</span>
+			</a>
+			<nav class="nav" aria-label="Navegación principal">
+				<a href="index.html">Inicio</a>
+				<a href="index.html#features">Características</a>
+				<a href="index.html#examples">Ejemplos</a>
+				<a href="index.html#contact" class="cta">Habla por WhatsApp</a>
+			</nav>
+		</div>
+	</header>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">¿Qué <span class="text-purple">datos</span> recolectamos?</h2>
-            <p>CheBot App puede recolectar los siguientes datos cuando interactuás con el servicio:</p>
-            <ul>
-              <li><strong>Información de contacto:</strong> Tu nombre de usuario y datos de contacto de la plataforma que utilices (X/Twitter o WhatsApp) para responder tus consultas.</li>
-              <li><strong>Mensajes:</strong> Las consultas que envíes al bot para procesarlas y responderte.</li>
-              <li><strong>Datos técnicos:</strong> Información técnica necesaria para el funcionamiento del servicio, como identificadores de sesión.</li>
-            </ul>
-          </section>
+	<main>
+		<div class="container">
+			<header style="margin-bottom:18px">
+				<h1>Política de privacidad</h1>
+				<p class="important">Última actualización: 2025</p>
+			</header>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">¿Cómo usamos tus <span class="text-purple">datos</span>?</h2>
-            <p>Utilizamos la información recolectada únicamente para:</p>
-            <ul>
-              <li>Procesar y responder tus consultas sobre datos públicos argentinos</li>
-              <li>Mejorar la calidad del servicio y la precisión de las respuestas</li>
-              <li>Mantener la seguridad y prevenir el uso indebido del servicio</li>
-            </ul>
-            <p>No utilizamos tus datos para publicidad dirigida ni los compartimos con terceros con fines comerciales.</p>
-          </section>
+			<section class="card">
+				<div class="color-box">Resumen</div>
+				<p>CheBot App respeta tu privacidad. Este servicio actúa como un puente entre usuarios y datos públicos de Argentina. No vendemos, compartimos ni utilizamos tus datos personales con fines comerciales.</p>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">Servicios de <span class="text-purple">terceros</span></h2>
-            <p>
-              CheBot App utiliza plataformas de terceros (X/Twitter y WhatsApp) para la comunicación. Estas plataformas tienen sus propias políticas de privacidad que también te aplican al usar estos servicios.
-            </p>
-            <p>
-              El servicio consulta datos públicos de <a href="https://datos.gob.ar" target="_blank" rel="noopener noreferrer">datos.gob.ar</a> y <a href="https://www.saij.gob.ar" target="_blank" rel="noopener noreferrer">saij.gob.ar</a>, los cuales son de acceso público según la <a href="https://www.saij.gob.ar/LNS0006235" target="_blank" rel="noopener noreferrer">Ley 27.275 de Derecho de Acceso a la Información Pública</a>.
-            </p>
-          </section>
+			<section class="card">
+				<div class="color-box">¿Qué datos recolectamos?</div>
+				<p>CheBot App puede recolectar los siguientes datos cuando interactuás con el servicio:</p>
+				<ul>
+					<li><strong>Información de contacto:</strong> Tu nombre de usuario y datos de contacto de la plataforma que utilices (X/Twitter o WhatsApp) para responder tus consultas.</li>
+					<li><strong>Mensajes:</strong> Las consultas que envíes al bot para procesarlas y responderte.</li>
+					<li><strong>Datos técnicos:</strong> Información técnica necesaria para el funcionamiento del servicio, como identificadores de sesión.</li>
+				</ul>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">Cookies y <span class="text-purple">tecnologías</span> similares</h2>
-            <p>
-              Este sitio web puede utilizar cookies básicas para mejorar tu experiencia de navegación. No utilizamos cookies de seguimiento publicitario.
-            </p>
-          </section>
+			<section class="card">
+				<div class="color-box">¿Cómo usamos tus datos?</div>
+				<p>Utilizamos la información recolectada únicamente para:</p>
+				<ul>
+					<li>Procesar y responder tus consultas sobre datos públicos argentinos</li>
+					<li>Mejorar la calidad del servicio y la precisión de las respuestas</li>
+					<li>Mantener la seguridad y prevenir el uso indebido del servicio</li>
+				</ul>
+				<p>No utilizamos tus datos para publicidad dirigida ni los compartimos con terceros con fines comerciales.</p>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4"><span class="text-purple">Seguridad</span></h2>
-            <p>
-              Implementamos medidas de seguridad razonables para proteger tu información. Sin embargo, ningún sistema de transmisión por internet es 100% seguro.
-            </p>
-          </section>
+			<section class="card">
+				<div class="color-box">Servicios de terceros</div>
+				<p>CheBot App utiliza plataformas de terceros (X/Twitter y WhatsApp) para la comunicación. Estas plataformas tienen sus propias políticas de privacidad que también te aplican al usar estos servicios.</p>
+				<p>El servicio consulta datos públicos de datos.gob.ar y saij.gob.ar, los cuales son de acceso público según la Ley 27.275 de Derecho de Acceso a la Información Pública.</p>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">Tus <span class="text-purple">derechos</span></h2>
-            <p>
-              De acuerdo con la normativa argentina sobre protección de datos personales, tenés derecho a:
-            </p>
-            <ul>
-              <li>Acceder a tus datos personales</li>
-              <li>Solicitar la corrección o eliminación de tus datos</li>
-              <li>Limitar el procesamiento de tus datos</li>
-              <li>Retirar tu consentimiento en cualquier momento</li>
-            </ul>
-          </section>
+			<section class="card">
+				<div class="color-box">Cookies y tecnologías similares</div>
+				<p>Este sitio web puede utilizar cookies básicas para mejorar tu experiencia de navegación. No utilizamos cookies de seguimiento publicitario.</p>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4"><span class="text-purple">Contacto</span></h2>
-            <p>
-              Si tenés preguntas o inquietudes sobre esta política de privacidad, podés contactarnos a través de:
-            </p>
-            <ul>
-              <li>X (Twitter): <a href="https://x.com/CheBotApp" target="_blank" rel="noopener noreferrer">@CheBotApp</a></li>
-              <li>WhatsApp: <a href="https://wa.me/5491123960774" target="_blank" rel="noopener noreferrer">+54 9 11 2396-0774</a></li>
-            </ul>
-          </section>
+			<section class="card">
+				<div class="color-box">Seguridad</div>
+				<p>Implementamos medidas de seguridad razonables para proteger tu información. Sin embargo, ningún sistema de transmisión por internet es 100% seguro.</p>
+			</section>
 
-          <section class="mb-5">
-            <h2 class="section-title mb-4">Cambios a esta <span class="text-purple">política</span></h2>
-            <p>
-              Podemos actualizar esta política de privacidad ocasionalmente. Te notificaremos de cualquier cambio significativo a través de nuestros canales de comunicación.
-            </p>
-          </section>
+			<section class="card">
+				<div class="color-box">Tus derechos</div>
+				<p>De acuerdo con la normativa argentina sobre protección de datos personales, tenés derecho a:</p>
+				<ul>
+					<li>Acceder a tus datos personales</li>
+					<li>Solicitar la corrección o eliminación de tus datos</li>
+					<li>Limitar el procesamiento de tus datos</li>
+					<li>Retirar tu consentimiento en cualquier momento</li>
+				</ul>
+			</section>
 
-          <div class="text-center my-5">
-            <a href="/" class="btn btn-primary">Volver al Inicio</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer class="bg-white border-top mt-5 py-3 text-center small text-muted">
-    CheBot App &copy; 2025 &middot; <a href="https://chebot.app/terms.html">Términos y Condiciones</a> &middot; <a href="https://chebot.app/privacy.html">Política de Privacidad</a>
-  </footer>
+			<section class="card">
+				<div class="color-box">Contacto</div>
+				<p>Si tenés preguntas o inquietudes sobre esta política de privacidad, podés contactarnos a través de:</p>
+				<ul>
+					<li>X (Twitter): @CheBotApp</li>
+					<li>WhatsApp: +54 9 11 2396-0774</li>
+				</ul>
+			</section>
+
+			<section class="card">
+				<div class="color-box">Cambios a esta política</div>
+				<p>Podemos actualizar esta política de privacidad ocasionalmente. Te notificaremos de cualquier cambio significativo a través de nuestros canales de comunicación.</p>
+			</section>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+			<p style="margin:0;color:var(--muted)">CheBot &copy; 2025</p>
+			<nav style="display:flex;gap:12px;align-items:center">
+				<a href="index.html#features">Características</a>
+				<a href="index.html#examples">Ejemplos</a>
+				<a href="index.html#contact">Contacto</a>
+				<a href="privacy.html" style="color:var(--text);font-weight:600">Política de privacidad</a>
+			</nav>
+		</div>
+	</footer>
 </body>
 </html>
